@@ -35,11 +35,11 @@ let value = myCache.take("nyckel", data);
 
 ### Steg för steg
 
->  Starta en mongodb container i docker
-> docker run --name mongodb -d -p 27018:27017 mongo
-> npm install
-> node mongoModel.js för att fylla på databasen
-> node index.js för att se loggen.
+>  Starta en mongodb container i docker\
+> docker run --name mongodb -d -p 27018:27017 mongo\
+> npm install\
+> node mongoModel.js för att fylla på databasen\
+> node index.js för att se loggen.\
 
 ---
 
