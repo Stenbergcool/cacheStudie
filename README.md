@@ -1,12 +1,10 @@
 # Node-Cache
 
-## Varför chaching?
 För att undvika att vi skickar onödigt många requests till en databas-service kan vi “cachea/förvara” semi-statisk data på servern. I detta testfall kör jag med parkeringsplatser.
 
 Här kan vi bestämma att cachen uppdateras i händelse av att en förändring skett i databasen eller att det görs på ett tidsintervall eller något annat, fantasin(paketet) sätter gränser.
 
 
-## Hur fungerar det?
 
 
 ---
@@ -29,17 +27,20 @@ const myCache = new NodeCache( { stdTTL: 100, checkperiod: 120 } );
 
 Börja med att initiera ett NodeCache-object.
 Här har vi lite olika alternativ att välja.
-I exemplet kör jag stdTTL: 100, aka hur länge vi vill att datan ska vara sparad.
+I exemplet kör jag stdTTL: 100, det här blir standard life-timen för dom cachade objekten.
+i .SET-metoden kan man specifiera en individuell lifeteam, eller inte ha någon alls.
+
 
 ```javascript
 async function cacheHandler() {
     let data = await getDataFromDb();
-    let success = myCache.set("stockholm", data);
+    let success = myCache.set("stockholm", data, 0);
     console.log(success);
     // True om det gick bra
 };
 ```
 Vi hämtar data från en databasmodell/databas och skickar in det i cachen på nyckel "stockholm".
+Sista parametern, 0 i detta fallet ger en lifetime till cachen på unlimited.
 
 ```javascript
 async function getCachedData() {

@@ -1,5 +1,5 @@
 const NodeCache = require( "node-cache" );
-const myCache = new NodeCache( { stdTTL: 100, checkperiod: 120 } );
+const myCache = new NodeCache( { stdTTL: 100} );
 const db = require("./database")
 
 
@@ -17,7 +17,7 @@ async function getDataFromDb() {
  */
 async function cacheHandler() {
     let data = await getDataFromDb();
-    let success = myCache.set("stockholm", data);
+    let success = myCache.set("stockholm", data, 0);
     console.log(success);
     // True om det gick bra
 };
