@@ -5,7 +5,6 @@ const db = require("./database")
 
 /**
  * Hämtar data från databasen
- * @returns array of objects
  */
 
 async function getDataFromDb() {
@@ -27,7 +26,6 @@ async function cacheHandler() {
  * Hämtar data från cachen
  * Om det inte finns något på nyckeln så körs
  * cacheHandler som i sin tur hämtar data från databasen
- * @returns array of objects
  */
 async function getCachedData() {
     let value = myCache.get("stockholm")
@@ -51,7 +49,6 @@ async function insertData() {
         "rate": "d"
     }
     let data = await db.insertOne(object)
-    console.log(data)
     if(data.acknowledged == true){
         cacheHandler()
     }
