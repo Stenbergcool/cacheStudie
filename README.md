@@ -9,6 +9,7 @@ Node-Cache arbetar med key=value principen, vi kopplar alltså viss data likt
 
 ```javascript
 myCache.set("nyckel", data);
+// bestäma flera nycklar
 myCache.mset([{"nyckel1", val: data}, {"nyckel2", val: data}]);
 ```
 För att hämta datan från nycklar kör vi
