@@ -9,6 +9,7 @@ Här kan vi bestämma att cachen uppdateras i händelse av att en förändring s
 
 
 ---
+## Använder mongoDB och node.js.
 
 ### Testa själv
 
@@ -21,8 +22,6 @@ Starta en mongodb container i docker
 ### node index.js för att se magin.
 
 ---
-Kommer i exemplet använda mongoDB och node.js.
-
 ![Alt text](assets/initieraCacheObject.png?raw=true "Title")\
 Börja med att initiera ett NodeCache-object.
 Här har vi lite olika alternativ att välja.
