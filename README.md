@@ -22,7 +22,8 @@ Starta en mongodb container i docker
 ### node index.js för att se magin.
 
 ---
-```
+
+```javascript
 const myCache = new NodeCache( { stdTTL: 100, checkperiod: 120 } );
 ```
 
@@ -30,7 +31,7 @@ Börja med att initiera ett NodeCache-object.
 Här har vi lite olika alternativ att välja.
 I exemplet kör jag stdTTL: 100, aka hur länge vi vill att datan ska vara sparad.
 
-```
+```javascript
 async function cacheHandler() {
     let data = await getDataFromDb();
     let success = myCache.set("stockholm", data);
@@ -40,7 +41,7 @@ async function cacheHandler() {
 ```
 Vi hämtar data från en databasmodell/databas och skickar in det i cachen på nyckel "stockholm".
 
-```
+```javascript
 async function getCachedData() {
     let value = myCache.get("stockholm")
     if (value == undefined){
@@ -56,7 +57,8 @@ om inte kör vi funktionen ovanför, annars så slipper vi ett request till en d
 kan direkt börja arbeta med datan.
 
 Kan tänka mig att man har något liknande i typ GET-requests.
-```
+
+```javascript
 async function insertData() {
     let object =
     {
