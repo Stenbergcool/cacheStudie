@@ -5,7 +5,29 @@ För att undvika att vi skickar onödigt många requests till en databas-service
 Här kan vi bestämma att cachen uppdateras i händelse av att en förändring skett i databasen eller att det görs på ett tidsintervall eller något annat, fantasin(paketet) sätter gränser.
 
 
+Node-Cache arbetar med key=value principen, vi kopplar alltså viss data likt
 
+```javascript
+myCache.set("nyckel", data);
+```
+För att hämta datan från nycklar kör vi
+
+```javascript
+let value = myCache.get("nyckel", data);
+// hämta flera nycklar
+let values = myCache.get(["nyckel", "nyckel2"]);
+```
+Samma gäller om vi vill ta bort nycklar
+```javascript
+myCache.del("nyckel", data);
+// tar bort flera nycklar
+myCache.del(["nyckel", "nyckel2"]);
+```
+Om vi vill hämta datan och sedan förstöra nyckeln kör vi
+
+```javascript
+let value = myCache.take("nyckel", data);
+```
 
 ---
 
