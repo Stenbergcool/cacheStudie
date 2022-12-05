@@ -11,14 +11,21 @@ Här kan vi bestämma att cachen uppdateras i händelse av att en förändring s
 
 Kommer i exemplet använda mongoDB och node.js.
 
+![Alt text](assets/initieraCacheObject.png?raw=true "Title")
+Börja med att initiera ett NodeCache-object.
+Här har vi lite olika alternativ att välja.
+I exemplet kör jag stdTTL: 100, aka hur länge vi vill att datan ska vara sparad.
 
 ![Alt text](assets/cacheHandler.png?raw=true "Title")
 
+
 ![Alt text](assets/getCachedData.png?raw=true "Title")
 
-![Alt text](assets/initieraCacheObject.png?raw=true "Title")
+
 
 ![Alt text](assets/insertData.png?raw=true "Title")
+
+
 
 ###
 Mitt lilla use-case
