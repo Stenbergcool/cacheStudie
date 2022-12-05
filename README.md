@@ -51,7 +51,7 @@ const myCache = new NodeCache( { stdTTL: 100, checkperiod: 120 } );
 
 Börja med att initiera ett NodeCache-object.
 Här har vi lite olika alternativ att välja.
-I exemplet kör jag stdTTL: 100, det här blir standard life-timen för dom cachade objekten.
+I exemplet kör jag stdTTL: 100, det blir standard life-timen för dom cachade objekten.
 i .SET-metoden kan man specifiera en individuell lifeteam, eller inte ha någon alls.
 
 
