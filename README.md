@@ -8,9 +8,9 @@ Här kan vi bestämma att cachen uppdateras i händelse av att en förändring s
 Node-Cache arbetar med key=value principen, vi kopplar alltså viss data likt
 
 ```javascript
-myCache.set("nyckel", data);
+let result = myCache.set("nyckel", data);
 // bestäma flera nycklar
-myCache.mset([{"nyckel1", val: data}, {"nyckel2", val: data}]);
+let result = myCache.mset([{"nyckel1", val: data}, {"nyckel2", val: data}]);
 ```
 För att hämta datan från nycklar kör vi
 
@@ -21,9 +21,9 @@ let values = myCache.mget(["nyckel1", "nyckel2"]);
 ```
 Samma gäller om vi vill ta bort nycklar
 ```javascript
-myCache.del("nyckel", data);
+let result = myCache.del("nyckel", data);
 // tar bort flera nycklar
-myCache.del(["nyckel1", "nyckel2"]);
+let result = myCache.del(["nyckel1", "nyckel2"]);
 ```
 Om vi vill hämta datan och sedan förstöra nyckeln kör vi
 
