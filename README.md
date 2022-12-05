@@ -8,7 +8,7 @@ Här kan vi bestämma att cachen uppdateras i händelse av att en förändring s
 
 
 
-
+---
 Kommer i exemplet använda mongoDB och node.js.
 
 ![Alt text](assets/initieraCacheObject.png?raw=true "Title")\
@@ -37,18 +37,18 @@ Detta kanske ska ske vid POST/PUT/DELETE-requests
 ###
 Mitt lilla use-case
 
-#### Steg för steg
+### Steg för steg
 
 Starta en mongodb container i docker
-##### docker run --name mongodb -d -p 27018:27017 mongo
+#### docker run --name mongodb -d -p 27018:27017 mongo
 
 #### paket för node
-##### npm install
+#### npm install
 
-##### node mongoModel.js
+#### node mongoModel.js
 För att fylla på databasen med dummy-data
 
-#### node index.js för att se magin.
+### node index.js för att se magin.
 
 
 [^1]: Referense: https://www.npmjs.com/package/node-cache
