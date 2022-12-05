@@ -42,7 +42,7 @@ Kan tänka mig att man har något liknande i typ GET-requests.
 ![Alt text](assets/insertData.png?raw=true "Title")\
 Vi insertar ny data i databasen och vill därför uppdatera våran cache.
 
-Detta kanske ska ske vid POST/PUT/DELETE-requests
+Sker vid POST/PUT/DELETE-requests, vad vet jag?
 
 
 [^1]: Referense: https://www.npmjs.com/package/node-cache
