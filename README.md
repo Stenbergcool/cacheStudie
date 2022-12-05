@@ -9,6 +9,18 @@ Här kan vi bestämma att cachen uppdateras i händelse av att en förändring s
 
 
 ---
+
+### Testa själv
+
+### Steg för steg
+
+Starta en mongodb container i docker
+#### docker run --name mongodb -d -p 27018:27017 mongo
+#### npm install
+#### node mongoModel.js för att fylla på databasen
+### node index.js för att se magin.
+
+---
 Kommer i exemplet använda mongoDB och node.js.
 
 ![Alt text](assets/initieraCacheObject.png?raw=true "Title")\
@@ -32,17 +44,6 @@ Kan tänka mig att man har något liknande i typ GET-requests.
 Vi insertar ny data i databasen och vill därför uppdatera våran cache.
 
 Detta kanske ska ske vid POST/PUT/DELETE-requests
-
-
-### Testa själv
-
-### Steg för steg
-
-Starta en mongodb container i docker
-#### docker run --name mongodb -d -p 27018:27017 mongo
-#### npm install
-#### node mongoModel.js för att fylla på databasen
-### node index.js för att se magin.
 
 
 [^1]: Referense: https://www.npmjs.com/package/node-cache
