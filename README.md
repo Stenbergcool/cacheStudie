@@ -50,3 +50,5 @@ För att fylla på databasen med dummy-data
 
 #### node index.js för att se magin.
 
+
+[^1]: Referense: https://www.npmjs.com/package/node-cache
