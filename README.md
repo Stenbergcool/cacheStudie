@@ -17,15 +17,21 @@ Här har vi lite olika alternativ att välja.
 I exemplet kör jag stdTTL: 100, aka hur länge vi vill att datan ska vara sparad.
 
 
-![Alt text](assets/cacheHandler.png?raw=true "Title")
+![Alt text](assets/cacheHandler.png?raw=true "Title")\
+Vi hämtar data från en databasmodell/databas och skickar in det i cachen på nyckel "stockholm".
+
+![Alt text](assets/getCachedData.png?raw=true "Title")\
+Den här funktionen kollar om det finns något sparat på nyckel "stockholm",
+om inte kör vi funktionen ovanför, annars så slipper vi ett request till en databas utan
+kan direkt börja arbeta med datan.
+
+Kan tänka mig att man har något liknande i typ GET-requests.
 
 
-![Alt text](assets/getCachedData.png?raw=true "Title")
+![Alt text](assets/insertData.png?raw=true "Title")\
+Vi insertar ny data i databasen och vill därför uppdatera våran cache.
 
-
-
-![Alt text](assets/insertData.png?raw=true "Title")
-
+Detta kanske ska ske vid POST/PUT/DELETE-requests
 
 
 ###
