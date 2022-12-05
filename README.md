@@ -45,4 +45,4 @@ Vi insertar ny data i databasen och vill därför uppdatera våran cache.
 Sker vid POST/PUT/DELETE-requests, vad vet jag?
 
 
-[^1]: Referense: https://www.npmjs.com/package/node-cache
+Referense: https://www.npmjs.com/package/node-cache
