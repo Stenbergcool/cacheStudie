@@ -1,4 +1,4 @@
-# Node-Cache
+# Node-Cache grunder
 
 För att undvika att vi skickar onödigt många requests till en databas-service kan vi “cachea/förvara” semi-statisk data på servern. I detta testfall kör jag med parkeringsplatser.
 
