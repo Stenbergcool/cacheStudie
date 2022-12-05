@@ -9,19 +9,20 @@ Node-Cache arbetar med key=value principen, vi kopplar alltså viss data likt
 
 ```javascript
 myCache.set("nyckel", data);
+myCache.mset([{"nyckel1", val: data}, {"nyckel2", val: data}]);
 ```
 För att hämta datan från nycklar kör vi
 
 ```javascript
 let value = myCache.get("nyckel", data);
 // hämta flera nycklar
-let values = myCache.get(["nyckel", "nyckel2"]);
+let values = myCache.mget(["nyckel1", "nyckel2"]);
 ```
 Samma gäller om vi vill ta bort nycklar
 ```javascript
 myCache.del("nyckel", data);
 // tar bort flera nycklar
-myCache.del(["nyckel", "nyckel2"]);
+myCache.del(["nyckel1", "nyckel2"]);
 ```
 Om vi vill hämta datan och sedan förstöra nyckeln kör vi
 
