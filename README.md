@@ -34,20 +34,14 @@ Vi insertar ny data i databasen och vill därför uppdatera våran cache.
 Detta kanske ska ske vid POST/PUT/DELETE-requests
 
 
-###
-Mitt lilla use-case
+### Testa själv
 
 ### Steg för steg
 
 Starta en mongodb container i docker
 #### docker run --name mongodb -d -p 27018:27017 mongo
-
-#### paket för node
 #### npm install
-
-#### node mongoModel.js
-För att fylla på databasen med dummy-data
-
+#### node mongoModel.js för att fylla på databasen
 ### node index.js för att se magin.
 
 
