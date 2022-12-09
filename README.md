@@ -68,6 +68,7 @@ Här har vi lite olika alternativ att välja.
 I exemplet kör jag stdTTL: 100, det blir standard life-timen för dom cachade objekten.
 i .SET-metoden kan man specifiera en individuell lifetime, eller inte ha någon alls.
 
+checkperiod är en inställning i node-cache som anger hur ofta cachen ska kontrolleras, om någon post har utgått av tid eller annat tas den bort.
 
 ```javascript
 async function cacheHandler() {
