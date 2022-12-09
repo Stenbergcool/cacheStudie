@@ -7,7 +7,7 @@ En cache uppdateras på olika sätt beroende på hur den är konfigurerad. Det k
 Node-Cache är ett npm paket som hjälper oss att använda cachen för att lagra data. Det innebär att vi kan koppla en viss datapost till en unik nyckel, så att vi enkelt kan hämta informationen igen när vi behöver den. På så sätt kan vi använda cachen för att effektivisera vår hantering av data från databasen
 
 
-
+För att sätta nycklar
 ```javascript
 let result = myCache.set("nyckel", data);
 // bestäma flera nycklar
