@@ -4,7 +4,7 @@ För att undvika att skicka onödigt många requests till en databas-service kan
 
 En cache uppdateras på olika sätt beroende på hur den är konfigurerad. Det kan till exempel ske när det sker en förändring i databasen, vid ett visst tidsintervall eller på något annat sätt. I vilket fall som helst är det viktigt att cachen alltid innehåller aktuell och korrekt information.
 
-Node-Cache är ett verktyg som använder key-value-principen för att lagra data. Det innebär att vi kan koppla en viss datapost till en unik nyckel, så att vi enkelt kan hämta informationen igen när vi behöver den. På så sätt kan vi använda cachen för att effektivisera vår hantering av data från databasen
+Node-Cache är ett npm paket som hjälper oss att använda cachen för att lagra data. Det innebär att vi kan koppla en viss datapost till en unik nyckel, så att vi enkelt kan hämta informationen igen när vi behöver den. På så sätt kan vi använda cachen för att effektivisera vår hantering av data från databasen
 
 
 
