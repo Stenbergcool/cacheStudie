@@ -7,6 +7,8 @@ Här kan vi bestämma att cachen uppdateras i händelse av att en förändring s
 
 Node-Cache arbetar med key=value principen, vi kopplar alltså viss data likt
 
+
+
 ```javascript
 let result = myCache.set("nyckel", data);
 // bestäma flera nycklar
@@ -30,6 +32,18 @@ Om vi vill hämta datan och sedan förstöra nyckeln kör vi
 ```javascript
 let value = myCache.take("nyckel", data);
 ```
+
+## TTL
+Time To Live, är en funktion som finns i node-cache-paketet som låter dig ställa in ett tidsintervall för hur länge en viss post i cachen ska vara giltig. När tidsintervallet har gått ut kommer posten automatiskt att tas bort från cachen, och den kommer inte längre att kunna hämtas med hjälp av dess nyckel.
+
+
+```javascript
+// Skapar nyckel med TTL 400
+let result = myCache.set("nyckel", data, 400);
+// Uppdaterar nyckel till 400
+myCache.touch("nyckel", 400)
+```
+
 
 ---
 
