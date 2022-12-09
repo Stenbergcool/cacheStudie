@@ -1,11 +1,10 @@
 # Node-Cache grunder
 
-För att undvika att vi skickar onödigt många requests till en databas-service kan vi “cachea/förvara” semi-statisk liten data på servern. I detta testfall kör jag med parkeringsplatser.
+För att undvika att skicka onödigt många requests till en databas-service kan vi använda en så kallad cache för att lagra semi-statisk liten data på servern. I det här fallet kan vi tänka oss att vi använder cachen för att lagra information om parkeringsplatser.
 
-Här kan vi bestämma att cachen uppdateras i händelse av att en förändring skett i databasen eller att det görs på ett tidsintervall eller något annat, fantasin(paketet) sätter gränser.
+En cache uppdateras på olika sätt beroende på hur den är konfigurerad. Det kan till exempel ske när det sker en förändring i databasen, vid ett visst tidsintervall eller på något annat sätt. I vilket fall som helst är det viktigt att cachen alltid innehåller aktuell och korrekt information.
 
-
-Node-Cache arbetar med key=value principen, vi kopplar alltså viss data likt
+Node-Cache är ett verktyg som använder key-value-principen för att lagra data. Det innebär att vi kan koppla en viss datapost till en unik nyckel, så att vi enkelt kan hämta informationen igen när vi behöver den. På så sätt kan vi använda cachen för att effektivisera vår hantering av data från databasen
 
 
 
